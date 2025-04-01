@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Place Your Order</h1>
+        <form action="/place_order" method="POST">
+            <label for="table_number">Table Number:</label>
+            <input type="text" id="table_number" name="table_number" required>
+
+            <label for="order_details">Order Details:</label>
+            <textarea id="order_details" name="order_details" rows="4" required></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <a href="/kitchen">Go to Kitchen</a>
+    </div>
+</body>
+</html>
